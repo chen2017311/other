@@ -3,36 +3,250 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	<!--轮播图样式-->	
+<style>
+ *{margin:0;padding:0;/*list-style:none;*/}
+ .wrap{height:252px;width:414px;overflow: hidden;
+ 		position: relative;padding-left: 30px;}
+ .wrap ul{position:absolute;} 
+ .wrap ul li{height:252px;}
+ .wrap ol{position:absolute;right:160px;bottom:10px;}
+ .wrap ol li{height:10px; width: 10px;border-radius: 50%;
+ 
+ 			background:#ccc;border:solid 1px #666;
+			 margin-left:5px;color:#000;float:left;line-height:center;
+			 text-align:center;cursor:pointer;}
+ .wrap ol .on{background:#E97305;color:#fff;}
+
+ </style>
+
+
 	</head>
 	<body>
-		<img id="light" src="img/light-off.png" />
-		<input id="button" type="image" src="img/close.png" />
-		
-		
-		<script>
-			window.onload=function(){
-				//获取元素
-				var light=document.getElementById("light");
-				var button=document.getElementById("button");
-				
-				//增加一个全局变量，用来保存开关状态。默认状态与HTML初始图片保持一致，即默认为关闭状态。
-				var open=false;
-				button.onclick=function(){
-					if(open){
-						this.src="img/close.png";
-						light.src="img/light-off.png";
-						open=false;
-					}else{
-						this.src="img/open.png";
-						light.src="img/light-on.png";
-						open=true;
-					}
-				}
-				
-				
-			}
+	
+		<div class="header">
+			<div class="logo">
+				<img src="img/header.jpg" />
+			</div>
+			<div class="header_left">
+				<a href="#"><span>政法干警考试网</span>|</a>
+				<a href="#"><span>中公首页</span>|</a>
+				<a href="#"><span>面授课程</span>|</a>
+				<a href="#"><span>图书商城</span>|</a>
+				<a href="#"><span>网校课程</span>|</a>
+				<a href="#"><span>练习我们</span></a>
+			</div>	
+				<p class="header_right"><span>400-6300-999</span></p>
+		</div>
+		<!--banner-->
+		<div class="banner">
+			<div class="ban">
+			<img src="img/ban01_02.png" />
+			<img src="img/ban01_04.png" />
+			<img src="img/ban01_05.png" />
+			</div>
+		</div>
+		<!--conter报考省份-->
+		<div class="fram">
 			
+			<div class="con1">
+				<p class="line">
+					<img src="img/jian01_03.jpg" />
+					<span>报考省份</span>
+					<img src="img/jian01_06.jpg" class="jian"/>
+				</p>
+				<div class="select">
+					<ul >
+						<a href="#"><li class="active">安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+					</ul>
+					<ul>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+						<a href="#"><li >安徽</li></a>
+					</ul>
+				</div>
+				<div class="con_left">
+					<img src="img/ico_05.jpg" />
+					
+					<div class="back">
+						<p class="pic">
+							<span>安徽</span>
+						</p>
+						<p class="title">准考证打印时间：<span>9月21日-9月23日</span></p>
+						<p class="title2"><span>【安徽政法干警考试公告】</span><span>【考试大纲】</span><span>【考前冲刺题】</span></p>
+						<div class="foot">
+							<a href="#"><span>准考证打印入口</span></a>
+						</div>
+					</div>
+				</div>
+				<!--<p class="con_right">-->
+						<div class="con_right">
+							<div class="wrap" id='wrap'>
+							 <ul id="pic">
+								 <li><img src="img/03.jpg" alt=""></li>
+								 <li><img src="img/05.jpg" alt=""></li>
+								 <li><img src="img/03.jpg" alt=""></li>
+								 <li><img src="img/02.jpg" alt=""></li>
+								 <li><img src="img/05.jpg" alt=""></li> 
+							 </ul>
+								 <ol id="list">
+								 <li class="on"></li>
+								 <li></li>
+								 <li></li>
+								 <li></li>
+								 <li></li>
+								 </ol>
+							 </div>
+
+						</div>
+	
+			</div>
+		</div>	
+			<!--conter免费福利-->
+		
+			<div class="ban3">
+				<div class="fram2">
+					<p class="pic2">
+						<img src="img/ico_11_06.jpg" />
+						<span>免费享福利 考前大放送</span>
+						<img src="img/66_07.jpg" class="pic3"/>
+					</p>
+					
+				<div class="con2">
+					<a href="#"><img src="img/images/ban3_03.jpg" /></a>
+				</div>
+				<!--列表箭头布局-->
+				<div class="con3">
+					<ul class="time" id="ti">
+						<li><img src="img/15_07.jpg" >
+						<a href="#">8月5日：陕西政法干警专项备考免费讲座（行测-逻辑判断）</a></li>
+						<li><img src="img/15_07.jpg" >
+						<a href="#">8月15日：陕西政法干警专项备考免费讲座（行测-逻辑判断）</a></li>
+						<li><img src="img/15_07.jpg">
+						<a href="#">8月25日：陕西政法干警专项备考免费讲座（行测-逻辑判断）</a></li>
+						<li><img src="img/15_07.jpg" >
+						<a href="#" >9月5日：陕西政法干警专项备考免费讲座（行测-逻辑判断）</a></li>
+						<li><img src="img/15_07.jpg" >
+						<a href="#">9月15日：陕西政法干警专项备考免费讲座（行测-逻辑判断）</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>	
+		
+		<!--轮播图JS代码-->
+		<script type="text/javascript">
+			 window.onload=function(){
+
+			 var wrap=document.getElementById('wrap'),
+			 pic=document.getElementById('pic').getElementsByTagName("li"),
+			 list=document.getElementById('list').getElementsByTagName('li'),
+			 index=0,
+			 timer=null;
+			
+			 timer = setInterval(autoPlay, 2000);
+			 wrap.onmouseover = function () {
+			 clearInterval(timer);
+			 }
+			
+			 wrap.onmouseout = function () {
+			 timer = setInterval(autoPlay, 2000);
+			 }
+			
+			 for (var i = 0; i < list.length; i++) {
+			 list[i].onmouseover = function () {
+			 clearInterval(timer);
+			 index = this.innerText - 1;
+			 changePic(index);
+			 };
+			 };
+			 function autoPlay () {
+			 if (++index >= pic.length) index = 0;
+			 changePic(index);
+			 }
+			
+			 function changePic (curIndex) {
+			 for (var i = 0; i < pic.length; ++i) {
+			 pic[i].style.display = "none";
+			 list[i].className = "";
+			 }
+			 pic[curIndex].style.display = "block";
+			 list[curIndex].className = "on";
+			 }
+			
+			 };
+			 //列表 箭头JS代码
+				var time = document.getElementById("ti")
+				var oLi1 = time.getElementsByTagName("li");
+				var Img = time.getElementsByTagName("img");
+				for(var i=0;i<oLi1.length;i++){
+					oLi1[i].index = i;
+					oLi1[i].onmouseover = function(){
+					for(var i=0;i<oLi1.length;i++){
+					Img[i].style.opacity = 0;	
+					}
+					Img[this.index].style.opacity= 1;
+					}
+				}		
 		</script>
+		<div class="fram3">
+			<div class="con4">
+				<img src="img/22_06.jpg" />
+				<span>临考冲刺 助你成功</span>
+				<img src="img/21_09.jpg" class=" pic5"/>
+				
+				<table width="1000" height="160" border="1" class="tab">
+					  <tr class="row">
+					    <td width="177" >成警实战冲刺班</td>
+					    <td width="130" class="row2">系统精讲
+							<br/>专项提升
+							<br/>讲练结合
+							<br/>封闭预测
+							<br/>网校+面试</td>
+					    <td width="300" class="row3">笔试：39天21晚（19天+11天11晚+9天10晚)<br/>面试：一般为7天7晚或6天6晚</td>
+					    <td width="265" class="row4">1、战线较长，适合备考时间比较充裕的学员；<br/>2、对理论知识熟练运用程度比较弱，想要通过大量的题目训练来进行复习；<br/>3、重视题海训练，善于总结。</td>
+					    <td width="100" class="row5">
+					    	<p class="pic6">咨询</p>
+					    	<p class="pic7">购买</p>
+					    </td>
+					  </tr>
+				</table>
+				
+			</div>
+		</div>	
+			<!--footer-->
+			<div class="footer">
+					<div class="fram4">
+				<p class="foot4"><span>中公简介 |</span><span>中公荣誉 | </span><span>社会责任 |</span><span>媒体聚焦 | </span><span>联系我们 |</span><span>版权声明 |</span><span>支付方式 |</span><span>友情链接 |</span><span>网站导航 |</span><span>加入我们</span></p>
+				<p class="foot1">Copyright©1999-<span id="year"></span>北京中公教育科技股份有限公司 .All Rights Reserved</p>
+				<p class="foot2">全国统一报名专线：400-6300-999  网校报名：400-900-8885  图书订购：400-6509-70</p>
+				<p class="foot3">京ICP备10218183号 京ICP证161188号 京公网安备 11010802020593号 出版物经营许可证新出发京批字第直130052号 站长统计</p>
+			</div>
+		</div>
+	<!--窗口-->
+		<div class="nav">
+			<p class="tit1">400-6330-999</p>
+			<p class="tit2"><img src="img/28_06.jpg"/>课程咨询</p>
+			<p class="tit3"><img src="img/26_07.jpg"/></p>
+			<p class="tit4"><img src="img/26_11.jpg"/></p>
+		</div>
+		<!--底部获取时间-->
+	<script src="js/dest.js"></script>
 	</body>
 </html>
